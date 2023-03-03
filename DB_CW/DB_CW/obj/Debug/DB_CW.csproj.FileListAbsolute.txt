@@ -41,3 +41,6 @@ D:\BMSTU\BMSTU-6-cem-DB-CW\DB_CW\DB_CW\bin\Debug\System.ValueTuple.xml
 D:\BMSTU\BMSTU-6-cem-DB-CW\DB_CW\DB_CW\obj\Debug\DB_CW.csproj.CopyComplete
 D:\BMSTU\BMSTU-6-cem-DB-CW\DB_CW\DB_CW\obj\Debug\DB_CW.AdminForm.resources
 D:\BMSTU\BMSTU-6-cem-DB-CW\DB_CW\DB_CW\obj\Debug\DB_CW.LogIn.resources
+D:\BMSTU\BMSTU-6-cem-DB-CW\DB_CW\DB_CW\obj\Debug\DB_CW.StudentForm.resources
+D:\BMSTU\BMSTU-6-cem-DB-CW\DB_CW\DB_CW\obj\Debug\DB_CW.TeacherForm.resources
+D:\BMSTU\BMSTU-6-cem-DB-CW\DB_CW\DB_CW\obj\Debug\DB_CW.AddTeacher.resources

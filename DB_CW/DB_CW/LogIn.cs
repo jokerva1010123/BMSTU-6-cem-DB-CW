@@ -24,11 +24,8 @@ namespace DB_CW
             ConnectData con = new ConnectData();
             con.connect();
             var sql = "SELECT * from userlogin where username = '" + txtLogin.Text + "' and passwords = '" + txtPassword.Text + "'";
-
             NpgsqlCommand cmd = new NpgsqlCommand(sql, con.connector);
-
             NpgsqlDataReader reader = cmd.ExecuteReader();
-
             if (reader.Read() == true) 
             {
                 var type = (int)reader.GetValue(2);
@@ -44,11 +41,23 @@ namespace DB_CW
                 }
                 else if(type == 1)
                 {
-                    MessageBox.Show("Ban la giao vien", "Info");
+                    this.Hide();
+                    TeacherForm teacherForm = new TeacherForm();
+                    teacherForm.ShowDialog();
+                    teacherForm = null;
+                    this.Show();
+                    this.txtLogin.Text = "";
+                    this.txtPassword.Text = "";
                 }
                 else
                 {
-                    MessageBox.Show("Ban la hoc sinh", "Info");
+                    this.Hide();
+                    StudentForm studentForm = new StudentForm();
+                    studentForm.ShowDialog();
+                    studentForm = null;
+                    this.Show();
+                    this.txtLogin.Text = "";
+                    this.txtPassword.Text = "";
                 }
             }
             else

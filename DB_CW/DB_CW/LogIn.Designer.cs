@@ -38,7 +38,7 @@
             // loginLabel
             // 
             this.loginLabel.AutoSize = true;
-            this.loginLabel.Location = new System.Drawing.Point(110, 118);
+            this.loginLabel.Location = new System.Drawing.Point(104, 132);
             this.loginLabel.Name = "loginLabel";
             this.loginLabel.Size = new System.Drawing.Size(80, 13);
             this.loginLabel.TabIndex = 0;
@@ -55,7 +55,7 @@
             // 
             // buttonLogin
             // 
-            this.buttonLogin.Location = new System.Drawing.Point(577, 137);
+            this.buttonLogin.Location = new System.Drawing.Point(414, 126);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(75, 23);
             this.buttonLogin.TabIndex = 2;
@@ -74,6 +74,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(223, 180);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
             this.txtPassword.TabIndex = 4;
             // 
