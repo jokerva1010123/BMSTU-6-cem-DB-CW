@@ -28,8 +28,8 @@ namespace DB_CW
             NpgsqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read() == true) 
             {
-                var type = (int)reader.GetValue(2);
-                if (type == 0)
+                var type = (int)reader.GetValue(3);
+                if (type == 1)
                 {
                     this.Hide();
                     AdminForm adminForm = new AdminForm();
@@ -39,7 +39,7 @@ namespace DB_CW
                     this.txtLogin.Text = "";
                     this.txtPassword.Text = "";
                 }
-                else if(type == 1)
+                else if(type == 2)
                 {
                     this.Hide();
                     TeacherForm teacherForm = new TeacherForm();
