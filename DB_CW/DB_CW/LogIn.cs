@@ -1,4 +1,5 @@
-﻿using Npgsql;
+﻿using DB_CW.DAO;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,18 +19,14 @@ namespace DB_CW
         {
             InitializeComponent();
         }
-
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            ConnectData con = new ConnectData();
-            con.connect();
-            var sql = "SELECT * from userlogin where username = '" + txtLogin.Text + "' and passwords = '" + txtPassword.Text + "'";
-            NpgsqlCommand cmd = new NpgsqlCommand(sql, con.connector);
-            NpgsqlDataReader reader = cmd.ExecuteReader();
-            if (reader.Read() == true) 
+            string userName = txtLogin.Text;
+            string password = txtPassword.Text;
+            int login = AccountDAO.Instance.Login(userName, password);            
+            if (login > 0)
             {
-                var type = (int)reader.GetValue(3);
-                if (type == 1)
+                if (login == 1)
                 {
                     this.Hide();
                     AdminForm adminForm = new AdminForm();
@@ -39,7 +36,7 @@ namespace DB_CW
                     this.txtLogin.Text = "";
                     this.txtPassword.Text = "";
                 }
-                else if(type == 2)
+                else if (login == 2)
                 {
                     this.Hide();
                     TeacherForm teacherForm = new TeacherForm();
@@ -61,10 +58,10 @@ namespace DB_CW
                 }
             }
             else
-            {
+            { 
                 MessageBox.Show("Sai tai khoan hoac mat khau", "Error");
+                return;
             }
-            con.disconnect();
         }
     }
 }

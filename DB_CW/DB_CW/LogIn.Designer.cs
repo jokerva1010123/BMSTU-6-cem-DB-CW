@@ -43,6 +43,7 @@
             this.loginLabel.Size = new System.Drawing.Size(80, 13);
             this.loginLabel.TabIndex = 0;
             this.loginLabel.Text = "Ten dang nhap";
+            this.loginLabel.UseWaitCursor = true;
             // 
             // password
             // 
@@ -52,15 +53,17 @@
             this.password.Size = new System.Drawing.Size(52, 13);
             this.password.TabIndex = 1;
             this.password.Text = "Mat khau";
+            this.password.UseWaitCursor = true;
             // 
             // buttonLogin
             // 
-            this.buttonLogin.Location = new System.Drawing.Point(414, 126);
+            this.buttonLogin.Location = new System.Drawing.Point(407, 132);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(75, 23);
-            this.buttonLogin.TabIndex = 2;
+            this.buttonLogin.TabIndex = 3;
             this.buttonLogin.Text = "Dang nhap";
             this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.UseWaitCursor = true;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // txtLogin
@@ -68,15 +71,17 @@
             this.txtLogin.Location = new System.Drawing.Point(223, 129);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(100, 20);
-            this.txtLogin.TabIndex = 3;
+            this.txtLogin.TabIndex = 1;
+            this.txtLogin.UseWaitCursor = true;
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(223, 180);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
-            this.txtPassword.TabIndex = 4;
+            this.txtPassword.TabIndex = 2;
+            this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.UseWaitCursor = true;
             // 
             // LogIn
             // 
@@ -91,6 +96,7 @@
             this.Name = "LogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dang nhap";
+            this.UseWaitCursor = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 

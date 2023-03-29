@@ -12,7 +12,7 @@ insert into userlogin(id_userlogin, username, passwords, id_role, nameUser, phon
 
 create table if not exists userlogin(
     id_userlogin SERIAL,
-    username varchar,
+    username varchar UNIQUE,
     passwords varchar,
     id_role int,
     nameUser varchar,
@@ -43,9 +43,11 @@ insert into student(id_student, id_userlogin, class) values
 (1, 3, '10A1');
 
 create table if not exists subject(
-    id_subject int,
+    id_subject SERIAL,
     namesubject varchar
 );
+
+insert into subject(namesubject) values ('Russian', 'Math');
 
 create table if not exists tea_sub(
     id_teacher int,
