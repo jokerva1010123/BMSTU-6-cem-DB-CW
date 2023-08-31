@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLDThi
@@ -89,7 +84,7 @@ namespace QLDThi
         {
             if (_listQuestionId == null || _listQuestionId == "")
             {
-                MessageBox.Show("Hãy chọn ít nhất một đề thi");
+                MessageBox.Show("Выбрать тест");
             }
             else
             {

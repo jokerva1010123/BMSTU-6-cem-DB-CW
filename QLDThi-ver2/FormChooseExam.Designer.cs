@@ -81,14 +81,14 @@ namespace QLDThi
             this.btnThi.Name = "btnThi";
             this.btnThi.Size = new System.Drawing.Size(75, 37);
             this.btnThi.TabIndex = 1;
-            this.btnThi.Text = "Vào thi";
+            this.btnThi.Text = "Старт";
             this.btnThi.UseVisualStyleBackColor = true;
             this.btnThi.Click += new System.EventHandler(this.btnThi_Click);
             // 
             // check
             // 
             this.check.Frozen = true;
-            this.check.HeaderText = "Chọn";
+            this.check.HeaderText = "Выбор";
             this.check.Name = "check";
             this.check.Width = 50;
             // 
@@ -106,7 +106,7 @@ namespace QLDThi
             this.codeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.codeDataGridViewTextBoxColumn.DataPropertyName = "code";
             this.codeDataGridViewTextBoxColumn.Frozen = true;
-            this.codeDataGridViewTextBoxColumn.HeaderText = "Mã đề";
+            this.codeDataGridViewTextBoxColumn.HeaderText = "Id теста";
             this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
             this.codeDataGridViewTextBoxColumn.Width = 108;
             // 
@@ -114,7 +114,7 @@ namespace QLDThi
             // 
             this.listQuestionIdDataGridViewTextBoxColumn.DataPropertyName = "listQuestionId";
             this.listQuestionIdDataGridViewTextBoxColumn.Frozen = true;
-            this.listQuestionIdDataGridViewTextBoxColumn.HeaderText = "listQuestionId";
+            this.listQuestionIdDataGridViewTextBoxColumn.HeaderText = "Id вопросов";
             this.listQuestionIdDataGridViewTextBoxColumn.Name = "listQuestionIdDataGridViewTextBoxColumn";
             this.listQuestionIdDataGridViewTextBoxColumn.Visible = false;
             // 

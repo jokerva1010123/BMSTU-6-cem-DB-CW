@@ -96,9 +96,9 @@ namespace QLDThi
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(354, 333);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 40);
+            this.button1.Size = new System.Drawing.Size(88, 40);
             this.button1.TabIndex = 66;
-            this.button1.Text = "Hủy";
+            this.button1.Text = "Отменить";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -111,8 +111,7 @@ namespace QLDThi
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(79, 40);
             this.button3.TabIndex = 65;
-            this.button3.Text = "Xác nhận";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.Text = "Ок";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -121,9 +120,9 @@ namespace QLDThi
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(112, 287);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 68;
-            this.label2.Text = "Mã đề thi:";
+            this.label2.Text = "Код теста:";
             // 
             // textBox1
             // 
@@ -137,12 +136,13 @@ namespace QLDThi
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(370, 287);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 13);
+            this.label9.Size = new System.Drawing.Size(55, 13);
             this.label9.TabIndex = 71;
-            this.label9.Text = "Môn học:";
+            this.label9.Text = "Предмет:";
             // 
             // cbSubject
             // 
+            this.cbSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSubject.FormattingEnabled = true;
             this.cbSubject.Location = new System.Drawing.Point(432, 284);
             this.cbSubject.Name = "cbSubject";
@@ -154,7 +154,7 @@ namespace QLDThi
             // 
             this.checkList.DataPropertyName = "checkList";
             this.checkList.FalseValue = "false";
-            this.checkList.HeaderText = "Chọn";
+            this.checkList.HeaderText = "Выбор";
             this.checkList.Name = "checkList";
             this.checkList.ReadOnly = true;
             this.checkList.TrueValue = "true";
@@ -170,7 +170,7 @@ namespace QLDThi
             // questionDataGridViewTextBoxColumn
             // 
             this.questionDataGridViewTextBoxColumn.DataPropertyName = "question";
-            this.questionDataGridViewTextBoxColumn.HeaderText = "Câu hỏi";
+            this.questionDataGridViewTextBoxColumn.HeaderText = "Вопрос";
             this.questionDataGridViewTextBoxColumn.Name = "questionDataGridViewTextBoxColumn";
             this.questionDataGridViewTextBoxColumn.ReadOnly = true;
             this.questionDataGridViewTextBoxColumn.Width = 200;
@@ -178,7 +178,7 @@ namespace QLDThi
             // listAnswerDataGridViewTextBoxColumn
             // 
             this.listAnswerDataGridViewTextBoxColumn.DataPropertyName = "listAnswer";
-            this.listAnswerDataGridViewTextBoxColumn.HeaderText = "Đáp án";
+            this.listAnswerDataGridViewTextBoxColumn.HeaderText = "Ответ";
             this.listAnswerDataGridViewTextBoxColumn.Name = "listAnswerDataGridViewTextBoxColumn";
             this.listAnswerDataGridViewTextBoxColumn.ReadOnly = true;
             this.listAnswerDataGridViewTextBoxColumn.Width = 200;
@@ -186,7 +186,7 @@ namespace QLDThi
             // correctAnswerDataGridViewTextBoxColumn
             // 
             this.correctAnswerDataGridViewTextBoxColumn.DataPropertyName = "correctAnswer";
-            this.correctAnswerDataGridViewTextBoxColumn.HeaderText = "Đáp án đúng";
+            this.correctAnswerDataGridViewTextBoxColumn.HeaderText = "Правильный ответ";
             this.correctAnswerDataGridViewTextBoxColumn.Name = "correctAnswerDataGridViewTextBoxColumn";
             this.correctAnswerDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -194,7 +194,7 @@ namespace QLDThi
             // 
             this._subjectName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this._subjectName.DataPropertyName = "subjectName";
-            this._subjectName.HeaderText = "Môn học";
+            this._subjectName.HeaderText = "Предмет";
             this._subjectName.Name = "_subjectName";
             this._subjectName.ReadOnly = true;
             // 

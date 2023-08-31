@@ -43,7 +43,7 @@ namespace QLDThi
         {
 
             if (string.IsNullOrEmpty(txtSubject.Text))
-                MessageBox.Show("Yêu cầu nhập đủ thông tin");
+                MessageBox.Show("Нельзя пусто");
             else
             {
                 var connection = new SqlConnection(connectionString);
@@ -54,7 +54,7 @@ namespace QLDThi
                 thisName.Value = txtSubject.Text;
                 command.ExecuteNonQuery();
                 connection.Close();
-                MessageBox.Show("Thêm mới thành công");
+                MessageBox.Show("Успешно");
                 GetListSubject();
             }
         }
@@ -62,7 +62,7 @@ namespace QLDThi
         private void btnEdit_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtSubject.Text))
-                MessageBox.Show("Yêu cầu nhập đủ thông tin");
+                MessageBox.Show("Нельзя пусто");
             else
             {
                 var connection = new SqlConnection(connectionString);
@@ -75,7 +75,7 @@ namespace QLDThi
                 thisId.Value = idSub;
                 command.ExecuteNonQuery();
                 connection.Close();
-                MessageBox.Show("Cập nhật thành công");
+                MessageBox.Show("Успешно");
                 GetListSubject();
             }
 
@@ -83,7 +83,7 @@ namespace QLDThi
 
         private void button4_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Bạn có chắc chắn muốn xóa? Dữ liệu sẽ không thể khôi phục.", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dr = MessageBox.Show("Удалить?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
                 var connection = new SqlConnection(connectionString);
@@ -97,7 +97,7 @@ namespace QLDThi
                 command.ExecuteNonQuery();
                 connection.Close();
 
-                MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Успешно", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 GetListSubject();
             }
         }
@@ -121,7 +121,7 @@ namespace QLDThi
         private void button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtSearch.Text))
-                MessageBox.Show("Yêu cầu nhập từ khóa dể tìm kiếm");
+                MessageBox.Show("Введите!");
             else
             {
                 var connection = new SqlConnection(connectionString);

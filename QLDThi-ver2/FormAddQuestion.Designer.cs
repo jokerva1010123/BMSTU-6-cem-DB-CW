@@ -32,7 +32,6 @@ namespace QLDThi
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddQuestion));
             this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -54,6 +53,7 @@ namespace QLDThi
             this.label8 = new System.Windows.Forms.Label();
             this.cbSubject = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorAmount)).BeginInit();
@@ -69,21 +69,14 @@ namespace QLDThi
             this.label6.TabIndex = 43;
             this.label6.Text = "B.";
             // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 23);
-            this.label4.TabIndex = 59;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 39;
-            this.label1.Text = "Câu hỏi: ";
+            this.label1.Text = "Вопрос:";
             // 
             // label2
             // 
@@ -153,9 +146,9 @@ namespace QLDThi
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 137);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
+            this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 56;
-            this.label3.Text = "Đáp án:";
+            this.label3.Text = "Ответ:";
             // 
             // label5
             // 
@@ -217,7 +210,7 @@ namespace QLDThi
             // 
             // richTextBox6
             // 
-            this.richTextBox6.Location = new System.Drawing.Point(83, 286);
+            this.richTextBox6.Location = new System.Drawing.Point(117, 286);
             this.richTextBox6.Name = "richTextBox6";
             this.richTextBox6.Size = new System.Drawing.Size(187, 53);
             this.richTextBox6.TabIndex = 66;
@@ -228,12 +221,13 @@ namespace QLDThi
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(6, 289);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 13);
+            this.label8.Size = new System.Drawing.Size(105, 13);
             this.label8.TabIndex = 67;
-            this.label8.Text = "Đáp án đúng:";
+            this.label8.Text = "Правильный ответ:";
             // 
             // cbSubject
             // 
+            this.cbSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSubject.FormattingEnabled = true;
             this.cbSubject.Location = new System.Drawing.Point(374, 286);
             this.cbSubject.Name = "cbSubject";
@@ -246,9 +240,16 @@ namespace QLDThi
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(312, 289);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 13);
+            this.label9.Size = new System.Drawing.Size(55, 13);
             this.label9.TabIndex = 69;
-            this.label9.Text = "Môn học:";
+            this.label9.Text = "Предмет:";
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 23);
+            this.label4.TabIndex = 59;
             // 
             // FormAddQuestion
             // 
@@ -288,7 +289,6 @@ namespace QLDThi
 
         #endregion
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAdd;
@@ -310,5 +310,6 @@ namespace QLDThi
         private System.Windows.Forms.RichTextBox richTextBox6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cbSubject;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -42,18 +42,18 @@ namespace QLDThi
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._subjectId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._subjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._question = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._listAnswer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._correctAnswer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subjectId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.listQuestionId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._subjectId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._subjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._question = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._listAnswer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._correctAnswer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -65,11 +65,11 @@ namespace QLDThi
             // 
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblWelcome.Location = new System.Drawing.Point(364, 8);
+            this.lblWelcome.Location = new System.Drawing.Point(306, 8);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(98, 13);
+            this.lblWelcome.Size = new System.Drawing.Size(153, 13);
             this.lblWelcome.TabIndex = 21;
-            this.lblWelcome.Text = "Xin chào username";
+            this.lblWelcome.Text = "Добро пожаловать username";
             // 
             // tabPage1
             // 
@@ -82,18 +82,18 @@ namespace QLDThi
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(791, 452);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Câu hỏi";
+            this.tabPage1.Text = "Вопрос";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(526, 363);
+            this.btnDelete.Location = new System.Drawing.Point(503, 363);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(53, 40);
+            this.btnDelete.Size = new System.Drawing.Size(76, 40);
             this.btnDelete.TabIndex = 61;
-            this.btnDelete.Text = "Xóa";
+            this.btnDelete.Text = "Удалить";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -102,11 +102,11 @@ namespace QLDThi
             // 
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(402, 363);
+            this.btnEdit.Location = new System.Drawing.Point(379, 363);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(53, 40);
+            this.btnEdit.Size = new System.Drawing.Size(90, 40);
             this.btnEdit.TabIndex = 60;
-            this.btnEdit.Text = "Sửa";
+            this.btnEdit.Text = "Изменить";
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -117,9 +117,9 @@ namespace QLDThi
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdd.Location = new System.Drawing.Point(244, 363);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(79, 40);
+            this.btnAdd.Size = new System.Drawing.Size(84, 40);
             this.btnAdd.TabIndex = 41;
-            this.btnAdd.Text = "Thêm mới";
+            this.btnAdd.Text = "Добавить";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -167,7 +167,7 @@ namespace QLDThi
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(791, 452);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Đề thi";
+            this.tabPage2.Text = "Тест";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -234,56 +234,6 @@ namespace QLDThi
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "Id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.id.Width = 50;
-            // 
-            // _subjectId
-            // 
-            this._subjectId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this._subjectId.DataPropertyName = "subjectId";
-            this._subjectId.HeaderText = "Mã môn học";
-            this._subjectId.Name = "_subjectId";
-            this._subjectId.ReadOnly = true;
-            this._subjectId.Width = 91;
-            // 
-            // _subjectName
-            // 
-            this._subjectName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this._subjectName.DataPropertyName = "subjectName";
-            this._subjectName.HeaderText = "Môn học";
-            this._subjectName.Name = "_subjectName";
-            this._subjectName.ReadOnly = true;
-            // 
-            // _question
-            // 
-            this._question.DataPropertyName = "question";
-            this._question.HeaderText = "Câu hỏi";
-            this._question.Name = "_question";
-            this._question.ReadOnly = true;
-            this._question.Width = 250;
-            // 
-            // _listAnswer
-            // 
-            this._listAnswer.DataPropertyName = "listAnswer";
-            this._listAnswer.HeaderText = "Danh sách đáp án";
-            this._listAnswer.Name = "_listAnswer";
-            this._listAnswer.ReadOnly = true;
-            this._listAnswer.Width = 250;
-            // 
-            // _correctAnswer
-            // 
-            this._correctAnswer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this._correctAnswer.DataPropertyName = "correctAnswer";
-            this._correctAnswer.HeaderText = "Đáp án đúng";
-            this._correctAnswer.Name = "_correctAnswer";
-            this._correctAnswer.ReadOnly = true;
-            // 
             // _id
             // 
             this._id.DataPropertyName = "id";
@@ -330,6 +280,56 @@ namespace QLDThi
             this._status.Visible = false;
             this._status.Width = 50;
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "Id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.id.Width = 50;
+            // 
+            // _subjectId
+            // 
+            this._subjectId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this._subjectId.DataPropertyName = "subjectId";
+            this._subjectId.HeaderText = "Id предмета";
+            this._subjectId.Name = "_subjectId";
+            this._subjectId.ReadOnly = true;
+            this._subjectId.Width = 93;
+            // 
+            // _subjectName
+            // 
+            this._subjectName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this._subjectName.DataPropertyName = "subjectName";
+            this._subjectName.HeaderText = "Предмет";
+            this._subjectName.Name = "_subjectName";
+            this._subjectName.ReadOnly = true;
+            // 
+            // _question
+            // 
+            this._question.DataPropertyName = "question";
+            this._question.HeaderText = "Вопрос";
+            this._question.Name = "_question";
+            this._question.ReadOnly = true;
+            this._question.Width = 250;
+            // 
+            // _listAnswer
+            // 
+            this._listAnswer.DataPropertyName = "listAnswer";
+            this._listAnswer.HeaderText = "Ответы";
+            this._listAnswer.Name = "_listAnswer";
+            this._listAnswer.ReadOnly = true;
+            this._listAnswer.Width = 200;
+            // 
+            // _correctAnswer
+            // 
+            this._correctAnswer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this._correctAnswer.DataPropertyName = "correctAnswer";
+            this._correctAnswer.HeaderText = "Правильный ответ";
+            this._correctAnswer.Name = "_correctAnswer";
+            this._correctAnswer.ReadOnly = true;
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,17 +364,17 @@ namespace QLDThi
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn _subjectId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn _subjectName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn _question;
-        private System.Windows.Forms.DataGridViewTextBoxColumn _listAnswer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn _correctAnswer;
         private System.Windows.Forms.DataGridViewTextBoxColumn _id;
         private System.Windows.Forms.DataGridViewTextBoxColumn subjectId;
         private System.Windows.Forms.DataGridViewTextBoxColumn subjectName;
         private System.Windows.Forms.DataGridViewTextBoxColumn _code;
         private System.Windows.Forms.DataGridViewTextBoxColumn listQuestionId;
         private System.Windows.Forms.DataGridViewTextBoxColumn _status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _subjectId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _subjectName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _question;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _listAnswer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _correctAnswer;
     }
 }

@@ -44,7 +44,7 @@ namespace QLDThi
         {
             if (UserId == thisUserId)
             {
-                MessageBox.Show("Không thể xóa chính mình");
+                MessageBox.Show("Не можно сам удалить!");
             }
             else
             {
@@ -138,7 +138,7 @@ namespace QLDThi
         private void AddUser(string role)
         {
             if (string.IsNullOrEmpty(Username) || string.IsNullOrEmpty(Name))
-                MessageBox.Show("Yêu cầu nhập đủ thông tin");
+                MessageBox.Show("Нельзя пусто");
             else
             {
                 var connection = new SqlConnection(connectionString);
@@ -150,7 +150,7 @@ namespace QLDThi
                 var dataReader = checkExistUser.ExecuteReader(CommandBehavior.CloseConnection);
                 if (dataReader.HasRows)
                 {
-                    MessageBox.Show("Tên đăng nhập này đã tồn tại. Vui lòng chọn tên đăng nhập khác.");
+                    MessageBox.Show("Логин уже существует!");
                 }
                 else
                 {
@@ -166,7 +166,7 @@ namespace QLDThi
                     thisPassword.Value = BC.HashPassword(defaultPassword);
                     command.ExecuteNonQuery();
                     connection.Close();
-                    MessageBox.Show("Thêm mới thành công");
+                    MessageBox.Show("Успешно");
                     GetListAdmin();
                     GetListTeacher();
                     GetListStudent();
@@ -222,7 +222,7 @@ namespace QLDThi
         private void EditUser()
         {
             if (string.IsNullOrEmpty(Name)|| string.IsNullOrEmpty(Username))
-                MessageBox.Show("Yêu cầu nhập đủ thông tin");
+                MessageBox.Show("Нельзя пусто");
             else
             {
                 var connection = new SqlConnection(connectionString);
@@ -234,7 +234,7 @@ namespace QLDThi
                 var dataReader = checkExistUser.ExecuteReader(CommandBehavior.CloseConnection);
                 if (dataReader.HasRows)
                 {
-                    MessageBox.Show("Tên đăng nhập này đã tồn tại. Vui lòng chọn tên đăng nhập khác.");
+                    MessageBox.Show("Логин уже существует!");
                 }
                 else
                 {
@@ -248,7 +248,7 @@ namespace QLDThi
                     thisEditId.Value = thisUserId;
                     command.ExecuteNonQuery();
                     connection.Close();
-                    MessageBox.Show("Cập nhật thành công");
+                    MessageBox.Show("Успешно");
                     GetListAdmin();
                     GetListTeacher();
                     GetListStudent();
@@ -339,7 +339,7 @@ namespace QLDThi
 
         private void DeleteUser()
         {
-            DialogResult dr = MessageBox.Show("Bạn có chắc chắn muốn xóa? Dữ liệu sẽ không thể khôi phục.", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dr = MessageBox.Show("Удалить?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
                 var connection = new SqlConnection(connectionString);
@@ -353,14 +353,14 @@ namespace QLDThi
                 command.ExecuteNonQuery();
                 connection.Close();
 
-                MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Успешно", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void ResetPassword()
         {
             if (Name == "" || Username == "")
-                MessageBox.Show("Yêu cầu chọn tài khoản cần reset mật khẩu");
+                MessageBox.Show("Выбрать пользователя!");
             else
             {
 
@@ -377,14 +377,14 @@ namespace QLDThi
                 command.ExecuteNonQuery();
                 connection.Close();
 
-                MessageBox.Show("Reset mật khẩu thành công! Mật khẩu mới là Abcd@123", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Успешно", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void SearchUser(string role)
         {
             if (string.IsNullOrEmpty(Keyword))
-                MessageBox.Show("Yêu cầu nhập từ khóa dể tìm kiếm");
+                MessageBox.Show("Введите");
             else
             {
                 var connection = new SqlConnection(connectionString);
@@ -392,8 +392,6 @@ namespace QLDThi
                 command.CommandType = CommandType.StoredProcedure;
                 SqlParameter thisKeyWord = command.Parameters.Add("@keyword", SqlDbType.VarChar);
                 thisKeyWord.Value = Keyword;
-                SqlParameter thisRole = command.Parameters.Add("@role", SqlDbType.VarChar);
-                thisRole.Value = role;
                 connection.Open();
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
                 DataTable dataTable = new DataTable();

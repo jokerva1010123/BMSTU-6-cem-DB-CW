@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLDThi
@@ -45,7 +41,6 @@ namespace QLDThi
             ReloadForm();
             GetListSubject();
             cbSubject.SelectedItem = null;
-            cbSubject.SelectedText = "Tất cả";
             if (typeForm == "edit")
             {
                 for (int i = 0; i < dataGridView3.RowCount; i++)
@@ -137,13 +132,18 @@ namespace QLDThi
         private void add()
         {
             if (listQuestionId.Count() == 0)
-                MessageBox.Show("Hãy chọn ít nhất một câu hỏi");
+                MessageBox.Show("Выбрать вопрос!");
             else
             {
                 var connection = new SqlConnection(connectionString);
                 SqlCommand command = new SqlCommand("addExam", connection);
                 command.CommandType = CommandType.StoredProcedure;
                 SqlParameter thisCode = command.Parameters.Add("@code", SqlDbType.NVarChar);
+                if(textBox1.Text.Length <= 0)
+                {
+                    MessageBox.Show("Ошибка!", "Error");
+                    return;
+                }
                 thisCode.Value = textBox1.Text;
                 SqlParameter _listQuestionId = command.Parameters.Add("@listQuestionId", SqlDbType.NVarChar);
                 string result = string.Join(",", listQuestionId);
@@ -156,11 +156,11 @@ namespace QLDThi
                 {
                     connection.Open();
                     command.ExecuteNonQuery();
-                    MessageBox.Show("Thêm đề thi thành công");
+                    MessageBox.Show("Успешно");
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show("Đã có lỗi xảy ra", e.Message);
+                    MessageBox.Show(e.Message, "Ошибка");
                 }
                 connection.Close();
                 Close();
@@ -170,7 +170,7 @@ namespace QLDThi
         private void edit()
         {
             if (listQuestionId.Count() == 0)
-                MessageBox.Show("Hãy chọn ít nhất một câu hỏi");
+                MessageBox.Show("Выбрать вопрос!");
             else
             {
                 var connection = new SqlConnection(connectionString);
@@ -186,11 +186,11 @@ namespace QLDThi
                 {
                     connection.Open();
                     command.ExecuteNonQuery();
-                    MessageBox.Show("Sửa đề thi thành công");
+                    MessageBox.Show("Успешно");
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show("Đã có lỗi xảy ra", e.Message);
+                    MessageBox.Show(e.Message, "Ошибка");
                 }
                 connection.Close();
                 Close();
@@ -203,11 +203,6 @@ namespace QLDThi
             command.CommandType = CommandType.StoredProcedure;
             connection.Open();
             SqlDataReader dataReaderSubject = command.ExecuteReader();
-            cbSubject.Items.Add(new SubjectItem()
-            {
-                subjectId = 0,
-                subjectName = "Tất cả"
-            });
             if (dataReaderSubject.HasRows)
             {
                 while (dataReaderSubject.Read())

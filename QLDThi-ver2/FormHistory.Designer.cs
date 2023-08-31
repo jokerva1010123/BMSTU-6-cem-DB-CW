@@ -58,21 +58,21 @@ namespace QLDThi
             // examCode
             // 
             this.examCode.DataPropertyName = "code";
-            this.examCode.HeaderText = "Đề thi";
+            this.examCode.HeaderText = "Тест";
             this.examCode.Name = "examCode";
             this.examCode.ReadOnly = true;
             // 
             // score
             // 
             this.score.DataPropertyName = "score";
-            this.score.HeaderText = "Điểm số";
+            this.score.HeaderText = "Баллы";
             this.score.Name = "score";
             this.score.ReadOnly = true;
             // 
             // totalScore
             // 
             this.totalScore.DataPropertyName = "totalScore";
-            this.totalScore.HeaderText = "Tổng điểm";
+            this.totalScore.HeaderText = "Максимальный балл";
             this.totalScore.Name = "totalScore";
             this.totalScore.ReadOnly = true;
             // 
@@ -80,7 +80,7 @@ namespace QLDThi
             // 
             this.startTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.startTime.DataPropertyName = "startTime";
-            this.startTime.HeaderText = "Thời gian bắt đầu";
+            this.startTime.HeaderText = "Начальное время";
             this.startTime.Name = "startTime";
             this.startTime.ReadOnly = true;
             // 
@@ -88,7 +88,7 @@ namespace QLDThi
             // 
             this.endTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.endTime.DataPropertyName = "endTime";
-            this.endTime.HeaderText = "Thời gian kết thúc";
+            this.endTime.HeaderText = "Конечное время";
             this.endTime.Name = "endTime";
             this.endTime.ReadOnly = true;
             // 
@@ -96,7 +96,7 @@ namespace QLDThi
             // 
             this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.name.DataPropertyName = "name";
-            this.name.HeaderText = "Họ tên";
+            this.name.HeaderText = "Ф. И. О.";
             this.name.Name = "name";
             this.name.ReadOnly = true;
             // 

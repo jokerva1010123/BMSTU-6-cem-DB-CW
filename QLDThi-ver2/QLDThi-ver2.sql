@@ -49,7 +49,7 @@ create table tblQuestion(
 	 name nvarchar (40),
  )
 
-ALTER TABLE tblResult ADD totalScore int
+ALTER TABLE tblSubject ADD status int default 1
 ALTER TABLE tblExam ADD DEFAULT(1) FOR status
 
  /*tạo proc đăng ký */
@@ -92,11 +92,11 @@ exec GetListUser "A"
 
 
 /*tạo proc tìm kiếm ng dùng */
-create proc SearchUser
+create or alter proc SearchUser
 @keyword varchar
 as 
 select id, name, username from tblUser 
-where username like '%'+@keyword+'%' or name like '%'+@keyword+'%'
+where (username like '%'+@keyword+'%') and status = 1
 
 /*tạo proc kiểm tra đăng nhập */
 create proc LoginCheck 
@@ -299,8 +299,10 @@ as
 select id, name from tblSubject 
 where name like '%'+@keyword+'%' and status = 1
 
+select id, name from tblSubject 
+where name like '%Math%' and status = 1
 
-
+exec searchSubject 'Math'
 
 
 
@@ -332,4 +334,3 @@ VALUES (N'Hội văn hoá cứu quốc được thành lập vào thời gian n�
 insert into tblUser(username, pass_word, name, role)
 values ('admin', '$2a$11$WN7W9ugt6kNcF7Jaany.p.6PmaImbSzkhiYufDr4DTupcTLltzeJW', 'Admin', 'A')
 
-x	

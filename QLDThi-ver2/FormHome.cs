@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLDThi
@@ -26,7 +19,7 @@ namespace QLDThi
 
         private void FormHome_Load(object sender, EventArgs e)
         {
-            lblWelcome.Text = "Xin chào " + thisUsername;
+            lblWelcome.Text = "Добро пожаловать " + thisUsername;
             if (thisRole == "A")
             {
                 btnThi.Visible = false;
@@ -41,7 +34,7 @@ namespace QLDThi
                 btnLichSuThi.Visible = true;
                 btnQuanTri.Visible = true;
                 btnSubject.Visible = true;
-                btnUser.Text = "QUẢN LÝ HỌC SINH";
+                btnUser.Text = "Управление студентами";
                 btnUser.Visible = true;
             }
             else

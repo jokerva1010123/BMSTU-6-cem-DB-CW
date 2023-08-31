@@ -2,10 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -36,11 +33,11 @@ namespace QLDThi
             SubjectId = subjectId;
             if (typeForm == "new")
             {
-                this.Text = "Thêm mới câu hỏi";
+                this.Text = "Добавить вопрос";
             }
             else if (typeForm == "edit")
             {
-                this.Text = "Sửa câu hỏi";
+                this.Text = "Изменить вопрос";
                 _answer = answer.TrimStart('[').TrimEnd(']').Split(',');
 
                 richTextBox1.Text = Base64Decode(question);
@@ -78,15 +75,15 @@ namespace QLDThi
                 command.ExecuteNonQuery();
                 connection.Close();
 
-                MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Успешно", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
-            else MessageBox.Show("Đáp án đúng phải trùng với một trong các đáp án trên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else MessageBox.Show("Правильный ответ не существует!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Bạn có muốn hủy?", "Hủy", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dr = MessageBox.Show("Отменить?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
                 richTextBox1.Text = "";
@@ -123,10 +120,10 @@ namespace QLDThi
                 command.ExecuteNonQuery();
                 connection.Close();
 
-                MessageBox.Show("Thêm mới thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Успешно", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
-            else MessageBox.Show("Đáp án đúng phải trùng với một trong các đáp án trên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else MessageBox.Show("Правильный ответ не существует!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
         }
 
@@ -137,7 +134,7 @@ namespace QLDThi
             {
                 e.Cancel = true;
                 richTextBox1.Focus();
-                errorName.SetError(richTextBox1, "Trường Câu hỏi không được bỏ trống");
+                errorName.SetError(richTextBox1, "Нельзя пусто");
             }
             else
             {
@@ -157,31 +154,31 @@ namespace QLDThi
             {
                 e.Cancel = true;
                 richTextBox2.Focus();
-                errorName.SetError(richTextBox2, "Trường Đáp án không được bỏ trống");
+                errorName.SetError(richTextBox2, "Нельзя пусто");
             }
             else if (string.IsNullOrWhiteSpace(answer2))
             {
                 e.Cancel = true;
                 richTextBox3.Focus();
-                errorName.SetError(richTextBox3, "Trường Đáp án không được bỏ trống");
+                errorName.SetError(richTextBox3, "Нельзя пусто");
             }
             else if (string.IsNullOrWhiteSpace(answer3))
             {
                 e.Cancel = true;
                 richTextBox4.Focus();
-                errorName.SetError(richTextBox4, "Trường Đáp án không được bỏ trống");
+                errorName.SetError(richTextBox4, "Нельзя пусто");
             }
             else if (string.IsNullOrWhiteSpace(answer4))
             {
                 e.Cancel = true;
                 richTextBox5.Focus();
-                errorName.SetError(richTextBox5, "Trường Đáp án không được bỏ trống");
+                errorName.SetError(richTextBox5, "Нельзя пусто");
             }
             else if (string.IsNullOrWhiteSpace(correctAnswer))
             {
                 e.Cancel = true;
                 richTextBox6.Focus();
-                errorName.SetError(richTextBox6, "Trường Đáp án đúng không được bỏ trống");
+                errorName.SetError(richTextBox6, "Нельзя пусто");
             }
             else
             {

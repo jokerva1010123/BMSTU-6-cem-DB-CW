@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using BC = BCrypt.Net.BCrypt;
 
@@ -85,7 +79,7 @@ namespace QLDThi
             {
 
                 if (txtUsername.Text == "" || txtPassword.Text == "")
-                    MessageBox.Show("Yêu cầu nhập đủ thông tin đăng nhập");
+                    MessageBox.Show("Нельзя пусто");
                 else
                 {
                     var connection = new SqlConnection(connectionString);
@@ -113,12 +107,12 @@ namespace QLDThi
                         }
                         else
                         {
-                            MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
+                            MessageBox.Show("Логин или пароль неправильно");
                             connection.Close();
                         }
                     }
                     else
-                        MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
+                        MessageBox.Show("Логин или пароль неправильно");
                     connection.Close();
                 }
             }

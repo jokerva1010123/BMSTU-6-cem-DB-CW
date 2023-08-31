@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Configuration;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
@@ -28,7 +22,7 @@ namespace QLDThi
 
         private void FormAdmin_Load(object sender, EventArgs e)
         {
-            lblWelcome.Text = "Xin chào " + username;
+            lblWelcome.Text = "Добро пожаловать " + username;
             ReloadForm();
             ReloadExamForm();
         }
@@ -149,7 +143,7 @@ namespace QLDThi
 
         public void deleteData()
         {
-            DialogResult dr = MessageBox.Show("Bạn có chắc chắn muốn xóa? Dữ liệu sẽ không thể khôi phục.", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dr = MessageBox.Show("Удалить?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
                 var connection = new SqlConnection(connectionString);
@@ -163,14 +157,14 @@ namespace QLDThi
                 command.ExecuteNonQuery();
                 connection.Close();
 
-                MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Успешно", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ReloadForm();
             }
         }
 
         public void deleteExam()
         {
-            DialogResult dr = MessageBox.Show("Bạn có chắc chắn muốn xóa? Dữ liệu sẽ không thể khôi phục.", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dr = MessageBox.Show("Удалить?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
                 var connection = new SqlConnection(connectionString);
@@ -183,7 +177,7 @@ namespace QLDThi
                 command.ExecuteNonQuery();
                 connection.Close();
 
-                MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Успешно", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ReloadExamForm();
                 button1.Enabled = false;
                 button2.Enabled = false;

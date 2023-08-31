@@ -43,7 +43,7 @@
             this.btnChangePW.Name = "btnChangePW";
             this.btnChangePW.Size = new System.Drawing.Size(109, 23);
             this.btnChangePW.TabIndex = 9;
-            this.btnChangePW.Text = "Đổi mật khẩu";
+            this.btnChangePW.Text = "Изменить пароль";
             this.btnChangePW.UseVisualStyleBackColor = true;
             this.btnChangePW.Click += new System.EventHandler(this.btnChangePW_Click);
             // 
@@ -52,18 +52,18 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(17, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 13);
+            this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Nhập lại MK mới";
+            this.label2.Text = "Повторить:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(17, 96);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.Size = new System.Drawing.Size(83, 13);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Mật khẩu mới";
+            this.label1.Text = "Новый пароль:";
             // 
             // txtNewPasswordConfirm
             // 
@@ -90,9 +90,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(17, 70);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 13);
+            this.label3.Size = new System.Drawing.Size(87, 13);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Mật khẩu cũ";
+            this.label3.Text = "Старый пароль:";
             // 
             // txtOldPassword
             // 
@@ -117,7 +117,7 @@
             this.Controls.Add(this.txtNewPasswordConfirm);
             this.Controls.Add(this.txtNewPassword);
             this.Name = "FormChangePW";
-            this.Text = "Đổi mật khẩu";
+            this.Text = "Изменить пароль";
             this.ResumeLayout(false);
             this.PerformLayout();
 

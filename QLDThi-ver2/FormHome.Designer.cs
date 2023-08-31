@@ -45,11 +45,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(149, 70);
+            this.label5.Location = new System.Drawing.Point(120, 54);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(215, 39);
+            this.label5.Size = new System.Drawing.Size(327, 39);
             this.label5.TabIndex = 11;
-            this.label5.Text = "Quản Lý Thi";
+            this.label5.Text = "Главная страница";
             // 
             // btnQuanTri
             // 
@@ -57,9 +57,9 @@
             this.btnQuanTri.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQuanTri.Location = new System.Drawing.Point(311, 200);
             this.btnQuanTri.Name = "btnQuanTri";
-            this.btnQuanTri.Size = new System.Drawing.Size(136, 54);
+            this.btnQuanTri.Size = new System.Drawing.Size(165, 54);
             this.btnQuanTri.TabIndex = 12;
-            this.btnQuanTri.Text = "CÂU HỎI/ĐỀ THÌ";
+            this.btnQuanTri.Text = "Управление вопросами/тестами";
             this.btnQuanTri.UseVisualStyleBackColor = true;
             this.btnQuanTri.Visible = false;
             this.btnQuanTri.Click += new System.EventHandler(this.btnNhanVien_Click);
@@ -71,9 +71,9 @@
             this.btnThi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThi.Location = new System.Drawing.Point(91, 129);
             this.btnThi.Name = "btnThi";
-            this.btnThi.Size = new System.Drawing.Size(136, 54);
+            this.btnThi.Size = new System.Drawing.Size(150, 60);
             this.btnThi.TabIndex = 13;
-            this.btnThi.Text = "THI";
+            this.btnThi.Text = "Сдавать тест";
             this.btnThi.UseVisualStyleBackColor = false;
             this.btnThi.Visible = false;
             this.btnThi.Click += new System.EventHandler(this.btnThi_Click);
@@ -82,11 +82,11 @@
             // 
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblWelcome.Location = new System.Drawing.Point(448, 12);
+            this.lblWelcome.Location = new System.Drawing.Point(12, 9);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(98, 13);
+            this.lblWelcome.Size = new System.Drawing.Size(153, 13);
             this.lblWelcome.TabIndex = 14;
-            this.lblWelcome.Text = "Xin chào username";
+            this.lblWelcome.Text = "Добро пожаловать username";
             // 
             // btnLichSuThi
             // 
@@ -95,9 +95,9 @@
             this.btnLichSuThi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLichSuThi.Location = new System.Drawing.Point(311, 129);
             this.btnLichSuThi.Name = "btnLichSuThi";
-            this.btnLichSuThi.Size = new System.Drawing.Size(136, 54);
+            this.btnLichSuThi.Size = new System.Drawing.Size(165, 54);
             this.btnLichSuThi.TabIndex = 20;
-            this.btnLichSuThi.Text = "LỊCH SỬ THI";
+            this.btnLichSuThi.Text = "Результаты";
             this.btnLichSuThi.UseVisualStyleBackColor = false;
             this.btnLichSuThi.Visible = false;
             this.btnLichSuThi.Click += new System.EventHandler(this.btnLichSuThi_Click);
@@ -108,9 +108,9 @@
             this.btnUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUser.Location = new System.Drawing.Point(90, 200);
             this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(137, 54);
+            this.btnUser.Size = new System.Drawing.Size(150, 60);
             this.btnUser.TabIndex = 21;
-            this.btnUser.Text = "QUẢN LÝ NGƯỜI DÙNG";
+            this.btnUser.Text = "Управление пользователями";
             this.btnUser.UseVisualStyleBackColor = true;
             this.btnUser.Visible = false;
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
@@ -119,7 +119,7 @@
             // 
             this.btnChangePW.BackColor = System.Drawing.SystemColors.Control;
             this.btnChangePW.Image = ((System.Drawing.Image)(resources.GetObject("btnChangePW.Image")));
-            this.btnChangePW.Location = new System.Drawing.Point(451, 42);
+            this.btnChangePW.Location = new System.Drawing.Point(459, 9);
             this.btnChangePW.Name = "btnChangePW";
             this.btnChangePW.Size = new System.Drawing.Size(42, 34);
             this.btnChangePW.TabIndex = 19;
@@ -130,7 +130,7 @@
             // 
             this.btnLogout.BackColor = System.Drawing.SystemColors.Control;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(504, 42);
+            this.btnLogout.Location = new System.Drawing.Point(512, 9);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(42, 34);
             this.btnLogout.TabIndex = 18;
@@ -140,11 +140,11 @@
             // btnSubject
             // 
             this.btnSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnSubject.Location = new System.Drawing.Point(91, 129);
+            this.btnSubject.Location = new System.Drawing.Point(90, 129);
             this.btnSubject.Name = "btnSubject";
-            this.btnSubject.Size = new System.Drawing.Size(136, 54);
+            this.btnSubject.Size = new System.Drawing.Size(150, 60);
             this.btnSubject.TabIndex = 22;
-            this.btnSubject.Text = "MÔN HỌC";
+            this.btnSubject.Text = "Управление предметами";
             this.btnSubject.UseVisualStyleBackColor = true;
             this.btnSubject.Click += new System.EventHandler(this.btnSubject_Click);
             // 

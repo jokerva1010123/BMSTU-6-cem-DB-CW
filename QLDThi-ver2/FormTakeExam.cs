@@ -80,6 +80,7 @@ namespace QLDThi
                     label2.Text = dataGridView1.Rows[e.RowIndex].Cells["question"].FormattedValue.ToString();
                     thisListAnswer = dataGridView1.Rows[e.RowIndex].Cells["listAnswer"].FormattedValue.ToString();
                     thisListAnswerModified = thisListAnswer.TrimStart('[').TrimEnd(']').Split(',').ToList();
+                    Console.WriteLine(thisListAnswerModified.ToString());
                     rbA.Text = "A. " + thisListAnswerModified[0].ToString();
                     rbB.Text = "B. " + thisListAnswerModified[1].ToString();
                     rbC.Text = "C. " + thisListAnswerModified[2].ToString();
@@ -166,7 +167,7 @@ namespace QLDThi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Bạn có chắc chắn muốn nộp bài?", "Xác nhận nộp bài", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dr = MessageBox.Show("Завершить?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
                 foreach (var item in listAnswerByUser)
@@ -199,7 +200,7 @@ namespace QLDThi
                 command.ExecuteNonQuery();
                 connection.Close();
 
-                MessageBox.Show("Nộp bài thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Успешно", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
                 Hide();
 

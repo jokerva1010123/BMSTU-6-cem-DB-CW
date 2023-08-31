@@ -21,7 +21,7 @@ namespace QLDThi
         {
             
             if (txtName.Text == "" || txtPassword.Text == "" || txtPasswordConfirm.Text == "")
-                MessageBox.Show("Yêu cầu nhập đủ thông tin");
+                MessageBox.Show("Нельзя пусто");
             else
             {
                 if (txtPassword.Text != txtPasswordConfirm.Text)

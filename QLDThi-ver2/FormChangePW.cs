@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using BC = BCrypt.Net.BCrypt;
 
@@ -29,9 +23,9 @@ namespace QLDThi
         private void btnChangePW_Click(object sender, EventArgs e)
         {
             if (txtOldPassword.Text == ""|| txtNewPassword.Text == "" || txtNewPasswordConfirm.Text == "")
-                MessageBox.Show("Yêu cầu nhập đủ thông tin.");
+                MessageBox.Show("Нельзя пусто");
             else if (txtNewPasswordConfirm.Text != txtNewPassword.Text)
-                MessageBox.Show("Hai mật khẩu không trùng khớp");
+                MessageBox.Show("Повторить неправильно");
             else if (ValidatePassword(txtNewPassword.Text, out errorMsg) == false)
             {
                 MessageBox.Show(errorMsg);
@@ -48,7 +42,7 @@ namespace QLDThi
                 connection.Open();
                 ChangePW.ExecuteNonQuery();
                 connection.Close();
-                MessageBox.Show("Đổi mật khẩu thành công!");
+                MessageBox.Show("Успешно");
                 Close();
             }
         }

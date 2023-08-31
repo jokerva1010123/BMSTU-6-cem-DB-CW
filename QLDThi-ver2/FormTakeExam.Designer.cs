@@ -93,7 +93,7 @@ namespace QLDThi
             this.gbAnswer.Size = new System.Drawing.Size(611, 86);
             this.gbAnswer.TabIndex = 37;
             this.gbAnswer.TabStop = false;
-            this.gbAnswer.Text = "Đáp án:";
+            this.gbAnswer.Text = "Ответ";
             // 
             // rbB
             // 
@@ -145,7 +145,7 @@ namespace QLDThi
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 38;
-            this.button1.Text = "Nộp bài";
+            this.button1.Text = "Завершить";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -161,7 +161,7 @@ namespace QLDThi
             // 
             this.question.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.question.DataPropertyName = "question";
-            this.question.HeaderText = "Câu hỏi";
+            this.question.HeaderText = "Вопрос";
             this.question.Name = "question";
             this.question.ReadOnly = true;
             // 
